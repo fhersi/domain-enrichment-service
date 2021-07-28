@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+
+<% for(let person of emails) { %> 
+    <form action="/enrich" method="POST">
+        <div class="card">
+            <div class="card-header">
+                <%= person.position %> 
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title"><%= person.firstName %> <%= person.lastName %>  </h5>
+                <p class="card-text"><%= person.sourcePage %></p>
+                <% for( const key in person ){ %>
+                    <input type="hidden" name="<%= key %>" value="<%= person[key] %>">                       
+                <% } %> 
+                <button type="submit" class="btn btn-primary">Enrich</button>
+            </div>
+        </div>
+    </form>
+<% } %> 

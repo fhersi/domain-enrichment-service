@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="card" style="width: 18rem;">
+    <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/3002578/3002578-1578799608743-0794d50801be9.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">
+            <% for(let key in data.data)  {%>
+                <section><%=key%>: <%= data.data[key] %>  </section>
+            <% } %> 
+        </p>
+    </div>
+</div>
