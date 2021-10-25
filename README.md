@@ -18,7 +18,7 @@ To sucessfully run this application you must first register with [People Data La
 ### Clone Repo
 
 ```bash
-git clone 
+git clone https://github.com/fhersi/PDLxSNOV.git
 ```
 
 ### Dependecies
